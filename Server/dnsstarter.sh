@@ -22,10 +22,10 @@ $TTL  604800
                         604800  )   ; Negative Cache TTL
 ;
 @   IN      NS      canyon.f01.com.
-@   IN      A       10.52.4.2       ;
+@   IN      A       10.52.2.2       ;
 www IN      CNAME   canyon.f01.com.
-riegel IN     A     10.52.4.2       ;
-granz IN      A     10.52.4.2       ;
+riegel IN     A     10.52.4.1       ;
+granz IN      A     10.52.3.1       ;
 ' > /etc/bind/jarkom/canyon.f01.com
 
 
