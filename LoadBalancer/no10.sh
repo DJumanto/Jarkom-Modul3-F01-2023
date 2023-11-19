@@ -11,11 +11,11 @@ upstream php_worker {
 server {
     listen 80;
     
-    server_name canyon.f01.com;
+    server_name channel.f01.com;
 
     location / {
         auth_basic "Restricted";
         auth_basic_user_file /etc/nginx/rahasiakita/.htpasswd;
         proxy_pass http://php_worker;
     }
-}' > /etc/nginx/sites-available/canyon.f01.com
+}' > /etc/nginx/sites-available/channel.f01.com

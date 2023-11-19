@@ -1,4 +1,4 @@
-apt-get update apt-get install isc-dhcp-server -y dhcpd --version
+apt-get update && apt-get install isc-dhcp-server -y dhcpd --version
 
 rm /run/dhcpd.pid
 
