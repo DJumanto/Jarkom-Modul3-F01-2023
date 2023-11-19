@@ -364,7 +364,7 @@ server {
 
 
 ### Result
-![no 11 test](no11_test.png)
+![no 11 test](img/no11_test.png)
 
 ## nomor 12
 ### Problem
