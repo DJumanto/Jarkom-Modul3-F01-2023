@@ -1,8 +1,11 @@
+apt-get update && apt-get install apache2-utils -y
+htpasswd -c /etc/nginx/rahasiakita/.htpasswd netics
+
 echo '
 upstream php_worker {
+        server 10.52.3.1;
+        server 10.52.3.2;
         server 10.52.3.3;
-        server 10.52.3.4;
-        server 10.52.3.5;
 }
 
 server {

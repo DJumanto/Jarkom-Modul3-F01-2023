@@ -1,8 +1,8 @@
 echo '
 upstream php_worker {
+        server 10.52.3.1;
+        server 10.52.3.2;
         server 10.52.3.3;
-        server 10.52.3.4;
-        server 10.52.3.5;
 }
 
 server {

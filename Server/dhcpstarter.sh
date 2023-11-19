@@ -31,4 +31,3 @@ subnet 10.52.4.0 netmask 255.255.255.0 {
 ' > /etc/dhcp/dhcpd.conf
 
 service isc-dhcp-server restart
-

@@ -1,0 +1,1 @@
+ab -n 100 -c 10 -p login.json  -T "application/json" -H "Accept: application/json" -H "Content-Type: application/json" http://channel.f01.com/api/auth/login
