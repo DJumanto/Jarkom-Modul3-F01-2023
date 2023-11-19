@@ -1,7 +1,8 @@
-apt-get update
-apt-get install isc-dhcp-server -y
-dhcpd --version
+apt-get update apt-get install isc-dhcp-server -y dhcpd --version
 
+rm /run/dhcpd.pid
+
+service isc-dhcp-server stop
 echo 'INTERFACESv4="eth0"' > /etc/default/isc-dhcp-server
 
 echo '
@@ -28,6 +29,36 @@ subnet 10.52.4.0 netmask 255.255.255.0 {
     default-lease-time 720;   
     max-lease-time 5760;        
 }
-' > /etc/dhcp/dhcpd.conf
 
-service isc-dhcp-server restart
+host Fern{
+   hardware ethernet ba:8a:1a:8d:47:cf;
+   fixed-address 10.52.4.3;
+
+}
+
+host Frieren {
+    hardware ethernet 66:59:e8:50:60:65;
+    fixed-address 10.52.4.1;
+}
+
+
+host Flamme {
+    hardware ethernet 26:0c:dc:43:d2:be;
+    fixed-address 10.52.4.2;
+}
+
+
+host Lawine {
+    hardware ethernet 5a:5b:20:c2:0e:23;
+    fixed-address 10.52.3.1;
+}
+
+host Lugner {
+    hardware ethernet ca:7b:cb:c2:a0:7d;
+    fixed-address 10.52.3.3;
+}
+
+host Linie {
+    hardware ethernet 16:80:c6:25:17:11;
+    fixed-address 10.52.3.2;
+}' > /etc/dhcp/dhcpd.conf
